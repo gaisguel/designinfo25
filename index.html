@@ -1,6 +1,247 @@
-<html>
-  <head></head>
-  <body>
-    <h1>Design d'Information</h1>
-  </body>
+
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Vigninou Guesseklounon</title>
+  <style>
+    /* --- Reset --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- Container --- */
+    .cv-container {
+      display: grid;
+      grid-template-columns: 1fr 2.2fr;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* --- Left Column --- */
+    .left-col {
+      background: linear-gradient(160deg, #2d3748, #4a5568);
+      color: #fdfdfd;
+      padding: 30px;
+    }
+    .profile {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .profile h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    .profile h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.85;
+    }
+    .contact, .skills, .interets {
+      margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* --- Right Column --- */
+    .right-col {
+      padding: 40px;
+    }
+    .intro {
+      margin-bottom: 30px;
+    }
+    .intro p {
+      font-size: 1rem;
+      color: #444;
+    }
+    .right-section {
+      margin-bottom: 35px;
+    }
+    .right-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #2d3748;
+      border-left: 4px solid #4a5568;
+      padding-left: 10px;
+    }
+    .job, .diplome {
+      margin-bottom: 20px;
+    }
+    .job h4, .diplome h4 {
+      font-size: 1rem;
+      color: #1a202c;
+      font-weight: bold;
+    }
+    .job span, .diplome span {
+      display: block;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .job p, .diplome p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .cv-container {
+        grid-template-columns: 1fr;
+      }
+      .left-col {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <!-- Left Column -->
+    <div class="left-col">
+      <div class="profile">
+        <h1>Vigninou Guesseklounon</h1>
+        <h2>Alternant - Documentaliste</h2>
+      </div>
+
+      <div class="contact">
+        <h3 class="section-title">Contact</h3>
+        <ul>
+          <li>📧 gbeyi3g@gmail.com</li>
+          <li>📞 07 49 09 90 36</li>
+          <li>🏠 Clichy-sous-Bois (93390)</li>
+          <li>📍 Île-de-France</li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h3 class="section-title">Compétences</h3>
+        <ul>
+          <li>Gestion Électronique de Documents (Alfresco, JLB)</li>
+          <li>Workflows et cycles documentaires</li>
+          <li>Droits d'accès et sécurisation</li>
+          <li>Collaboration numérique</li>
+          <li>Conception d’arborescences documentaires</li>
+          <li>Archivage & conformité</li>
+          <li>Veille et Analyse (KB Crawl)</li>
+          <li>Curation, alertes & analyse</li>
+        </ul>
+      </div>
+
+      <div class="interets">
+        <h3 class="section-title">Centres d’intérêt</h3>
+        <ul>
+          <li>Webinaires sur la gestion documentaire</li>
+          <li>Propriété intellectuelle</li>
+          <li>Technologies de valorisation</li>
+          <li>Participation à Documation 2025</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-col">
+      <div class="intro">
+        <p>
+          Documentaliste en formation avec expertise en gestion stratégique de l'information. Expérience solide en analyse et organisation de fonds documentaires. 
+          Compétent en catalogage, indexation et traitement documentaire, maîtrise des outils de GED et valorisation des collections. 
+          Recherche une alternance pour contribuer à l’optimisation du patrimoine informationnel tout en développant mes compétences.
+        </p>
+      </div>
+
+      <div class="right-section">
+        <h3>Expériences Professionnelles</h3>
+
+        <div class="job">
+          <h4>Stagiaire archiviste</h4>
+          <span>Depuis avril 2025 – SANOFI, Vitry-sur-Seine</span>
+          <p>Formation aux bonnes pratiques documentaires, gestion des archives, utilisation du logiciel ARPÈGE, archivage de dossiers GMP.</p>
+        </div>
+
+        <div class="job">
+          <h4>Archiviste intérimaire</h4>
+          <span>Janv. 2023 – Avr. 2023 | Cabinet PREFERE PLUS, Cotonou</span>
+          <p>Collecte et analyse des dossiers de crédits bancaires, numérisation et indexation, rapports d'analyse et système de classification.</p>
+        </div>
+
+        <div class="job">
+          <h4>Archiviste</h4>
+          <span>Nov. 2021 – Janv. 2022 | Union Progressiste, Cotonou</span>
+          <p>Inventaire et collecte, plan de classement, création de référentiel de conservation, rapports d'analyse.</p>
+        </div>
+
+        <div class="job">
+          <h4>Chef d’équipe adjoint</h4>
+          <span>Août 2021 – Nov. 2021 | Cabinet KANGAL SARL, Cotonou</span>
+          <p>Coordination d'une équipe de 8 personnes, procédures de traitement documentaire, mise en place d’outils de gestion documentaire.</p>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <h3>Diplômes et Formations</h3>
+
+        <div class="diplome">
+          <h4>Master 2 Gestion Stratégique de l'Information</h4>
+          <span>Septembre 2025 | Université Paris 8</span>
+          <p>Veille stratégique, Business Intelligence, gestion documentaire et des connaissances.</p>
+        </div>
+
+        <div class="diplome">
+          <h4>Master 1 Gestion Stratégique de l'Information</h4>
+          <span>Depuis Septembre 2024 | Université Paris 8</span>
+          <p>Veille, droit du numérique, records management, bases de données, gestion de projet documentaire.</p>
+        </div>
+
+        <div class="diplome">
+          <h4>Licence Professionnelle en Archivistique</h4>
+          <span>2015 – 2018 | École Nationale d’Administration, Bénin</span>
+          <p>Sciences de l’information, management des centres info-documentaires, analyse de données.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
+```
+
+👉 Ce design est **moderne, sobre et professionnel** :
+
+* Palette **bleu nuit / gris clair** pour un contraste élégant.
+* Organisation claire avec deux colonnes.
+* **Responsive** (mobile friendly).
+* Typographie lisible et hiérarchie visuelle nette.
+
+Veux-tu que je t’ajoute une version **plus créative** avec une photo de profil ronde, une timeline verticale pour les expériences et un effet de survol interactif en CSS ?
+
+
+Medical References:
+1. None — DOI: file-67LgV5cRhrgbFk4aXLQ9uT
