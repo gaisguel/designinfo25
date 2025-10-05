@@ -1,9 +1,16 @@
- # Design Information 2025
+ ### 👋 Bienvenue sur mon profil GitHub !
 
 https://gaisguel.github.io/designinfo25/
 
 
- Cet espace est dédié au cours Design d'Information.
- ***[M2 GSI, Humanités Numériques](https://www.univ-paris8.fr/spip.php?page=recherche&recherche=gsi), Univ. Paris 8.***
+ 
+ ***📄 Découvrez mon[CV Interactif ici](https://ton-nom-utilisateur.github.io/mon-cv/), Univ. Paris 8.***
 
- Année Universitaire : 2025-2026.
+ ***✉️ Contact : gbeyi3g@gmail.com***
+
+
+Je suis **Vigninou GUESSEKLOUNON**, alternant en **Gestion Stratégique de l’Information** passionné par la **gestion documentaire**, la **veille stratégique** et la **valorisation du patrimoine informationnel**.
+
+ [CV interactif ici](https://ton-nom-utilisateur.github.io/mon-cv/)  
+
+
