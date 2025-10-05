@@ -1,6 +1,6 @@
  ### 👋 Bienvenue sur mon profil GitHub !
  
- ***📄 Découvrez mon[CV Interactif ici](https://ton-nom-utilisateur.github.io/mon-cv/).***
+ ***📄 Découvrez mon[CV Interactif ici](https://gaisguel.github.io/designinfo25/).***
 
  ***✉️ Contact : gbeyi3g@gmail.com***
 
