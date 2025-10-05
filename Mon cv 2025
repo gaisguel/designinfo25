@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Vigninou GUESSEKLOUNON</title>
+  <style>
+    /* ====== VARIABLES ====== */
+    :root {
+      --main-color: #2b6cb0;
+      --bg-color: #f4f7fb;
+      --text-color: #222;
+      --muted: #555;
+      --card-bg: #fff;
+      --shadow: 0 8px 20px rgba(0,0,0,0.08);
+      --radius: 14px;
+    }
+
+    /* ====== GLOBAL STYLES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 40px 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+      animation: fadeIn 1s ease;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--main-color), #60a5fa);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: white;
+      color: var(--main-color);
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-text {
+      flex: 1;
+      margin-left: 25px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    .contact {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .contact span {
+      display: block;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--main-color);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+      border-left: 4px solid var(--main-color);
+      padding-left: 10px;
+    }
+
+    /* ====== COMPÉTENCES ====== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--bg-color);
+      border: 1px solid #ddd;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .tag:hover {
+      transform: translateY(-3px);
+      background: var(--main-color);
+      color: white;
+    }
+
+    /* ====== TIMELINE ====== */
+    .timeline {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--main-color), #a0c4ff);
+      border-radius: 2px;
+    }
+
+    .event {
+      position: relative;
+      margin-bottom: 25px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: var(--shadow);
+      animation: slideUp 0.6s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .event::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: -22px;
+      top: 20px;
+      background: var(--main-color);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(43,108,176,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .event:hover::before {
+      transform: scale(1.2);
+    }
+
+    .event h4 {
+      color: var(--text-color);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .event span {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .event p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* ====== FORMATIONS ====== */
+    .education {
+      display: grid;
+      gap: 15px;
+    }
+
+    .edu-card {
+      background: var(--card-bg);
+      border: 1px solid #eee;
+      border-left: 5px solid var(--main-color);
+      border-radius: 8px;
+      padding: 15px 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .edu-card h4 {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    .edu-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ====== CENTRES D'INTÉRÊT ====== */
+    .interests {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .interest {
+      background: var(--bg-color);
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .interest:hover {
+      background: var(--main-color);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 850px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-text {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+      .interests {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile-pic">VG</div>
+      <div class="header-text">
+        <h1>Vigninou GUESSEKLOUNON</h1>
+        <h2>Alternant - Documentaliste</h2>
+        <div class="contact">
+          <span>📧 gbeyi3g@gmail.com</span>
+          <span>📞 07 49 09 90 36</span>
+          <span>📍 Clichy-sous-Bois (93390) - Île-de-France</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Colonne gauche -->
+      <div>
+        <section>
+          <h3>Profil</h3>
+          <p>Documentaliste en formation avec expertise en gestion stratégique de l'information. Expérience solide en analyse et organisation de fonds documentaires. Maîtrise des outils de GED et des techniques de valorisation des collections.</p>
+        </section>
+
+        <section>
+          <h3>Compétences</h3>
+          <div class="skills">
+            <div class="tag">Gestion Électronique de Documents</div>
+            <div class="tag">Alfresco & JLB</div>
+            <div class="tag">Archivage</div>
+            <div class="tag">Veille et Curation</div>
+            <div class="tag">Workflows</div>
+            <div class="tag">Analyse documentaire</div>
+            <div class="tag">Gestion de projet</div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Centres d'intérêt</h3>
+          <div class="interests">
+            <div class="interest">🧾 Webinaires sur la GED</div>
+            <div class="interest">⚖️ Propriété intellectuelle</div>
+            <div class="interest">🔍 Veille & Analyse</div>
+            <div class="interest">📚 Documation 2025</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Colonne droite -->
+      <div>
+        <section>
+          <h3>Expériences professionnelles</h3>
+          <div class="timeline">
+            <div class="event">
+              <h4>Stagiaire archiviste</h4>
+              <span>Depuis avril 2025 — SANOFI, Vitry-sur-Seine</span>
+              <p>Formation aux bonnes pratiques documentaires, gestion des archives et utilisation du logiciel ARPÈGE.</p>
+            </div>
+
+            <div class="event">
+              <h4>Archiviste intérimaire</h4>
+              <span>Janv. 2023 – Avr. 2023 — Cabinet PREFERE PLUS, Cotonou</span>
+              <p>Collecte et analyse structurée de dossiers bancaires, numérisation, indexation et rapports d'analyse.</p>
+            </div>
+
+            <div class="event">
+              <h4>Archiviste</h4>
+              <span>Nov. 2021 – Janv. 2022 — Union Progressiste, Cotonou</span>
+              <p>Inventaire, plan de classement, référentiel de conservation et rapports d'activité.</p>
+            </div>
+
+            <div class="event">
+              <h4>Chef d’équipe adjoint</h4>
+              <span>Août 2021 – Nov. 2021 — Cabinet KANGAL SARL, Cotonou</span>
+              <p>Coordination d'une équipe de 8 personnes, mise en œuvre de procédures et outils de gestion documentaire.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Diplômes & Formations</h3>
+          <div class="education">
+            <div class="edu-card">
+              <h4>Master 2 Gestion Stratégique de l'Information</h4>
+              <span>Université Paris 8 — Septembre 2025</span>
+            </div>
+
+            <div class="edu-card">
+              <h4>Master 1 Gestion Stratégique de l'Information</h4>
+              <span>Université Paris 8 — Depuis septembre 2024</span>
+            </div>
+
+            <div class="edu-card">
+              <h4>Licence Professionnelle en Archivistique</h4>
+              <span>École Nationale d’Administration, Bénin — 2015-2018</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
